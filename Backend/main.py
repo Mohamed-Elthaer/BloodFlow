@@ -1,34 +1,35 @@
 
+import os
+import math
+import numpy as np
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, model_validator
+from scipy.optimize import linprog
+
 from vam import vam
 from modi import modi
-from scipy.optimize import linprog
-import numpy as np
-import math
 
 app = FastAPI(title="Transportation Optimization API")
 
-from fastapi.middleware.cors import CORSMiddleware
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+frontend_url = os.getenv("FRONTEND_URL")
+
+if frontend_url:
+    allowed_origins.append(frontend_url.rstrip("/"))
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["http://localhost:5173"],
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
 
 class CapacityRule(BaseModel):
     source: str
