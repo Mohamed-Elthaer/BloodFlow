@@ -1,26 +1,69 @@
+// export const demo = () => ({
+//   name: "Demo: fictional Nile Valley network (illustrative only)",
+//   banks: ["Bank A", "Bank B", "Bank C", "Bank D"],
+//   hospitals: ["Hosp 1", "Hosp 2", "Hosp 3", "Hosp 4", "Hosp 5"],
+//   supply: [40, 30, 50, 30],
+//   demand: [25, 35, 30, 35, 25],
+//   cost: [
+//     [8, 6, 10, 9, 12],
+//     [9, 12, 13, 7, 10],
+//     [14, 9, 16, 5, 8],
+//     [7, 11, 6, 12, 9],
+//   ],
+//   mode: [
+//     ["ok", "ok", "ok", "ban", "ok"],
+//     ["ok", "cap", "ok", "ok", "ok"],
+//     ["ok", "ok", "ok", "ok", "ok"],
+//     ["ok", "ok", "ok", "ok", "ok"],
+//   ],
+//   cap: [
+//     [0, 0, 0, 0, 0],
+//     [0, 15, 0, 0, 0],
+//     [0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0],
+//   ],
+// });
+
 export const demo = () => ({
-  name: "Demo: fictional Nile Valley network (illustrative only)",
-  banks: ["Bank A", "Bank B", "Bank C", "Bank D"],
-  hospitals: ["Hosp 1", "Hosp 2", "Hosp 3", "Hosp 4", "Hosp 5"],
-  supply: [40, 30, 50, 30],
-  demand: [25, 35, 30, 35, 25],
+  name: "BloodFlow — Transportation Optimization Demo",
+
+  banks: [
+    "Bank A",
+    "Bank B",
+    "Bank C",
+    "Bank D",
+  ],
+
+  hospitals: [
+    "Hosp 1",
+    "Hosp 2",
+    "Hosp 3",
+    "Hosp 4",
+  ],
+
+  supply: [20, 30, 50, 20],
+
+  demand: [30, 40, 30, 20],
+
   cost: [
-    [8, 6, 10, 9, 12],
-    [9, 12, 13, 7, 10],
-    [14, 9, 16, 5, 8],
-    [7, 11, 6, 12, 9],
+    [4, 6, 4, 8],
+    [9, 14, 13, 5],
+    [10, 17, 10, 7],
+    [6, 9, 3, 4],
   ],
+
   mode: [
-    ["ok", "ok", "ok", "ban", "ok"],
-    ["ok", "cap", "ok", "ok", "ok"],
-    ["ok", "ok", "ok", "ok", "ok"],
-    ["ok", "ok", "ok", "ok", "ok"],
+    ["ok", "ok", "ok", "ok"],
+    ["ok", "ok", "ok", "ok"],
+    ["ok", "ok", "ok", "ok"],
+    ["ok", "ok", "ok", "ok"],
   ],
+
   cap: [
-    [0, 0, 0, 0, 0],
-    [0, 15, 0, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
   ],
 });
 export const empty = () => ({
