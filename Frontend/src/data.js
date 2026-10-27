@@ -24,46 +24,78 @@
 //   ],
 // });
 
+// export const demo = () => ({
+//   name: "BloodFlow — Transportation Optimization Demo",
+
+//   banks: [
+//     "Bank A",
+//     "Bank B",
+//     "Bank C",
+//     "Bank D",
+//   ],
+
+//   hospitals: [
+//     "Hosp 1",
+//     "Hosp 2",
+//     "Hosp 3",
+//     "Hosp 4",
+//   ],
+
+//   supply: [20, 30, 50, 20],
+
+//   demand: [30, 40, 30, 20],
+
+//   cost: [
+//     [4, 6, 4, 8],
+//     [9, 14, 13, 5],
+//     [10, 17, 10, 7],
+//     [6, 9, 3, 4],
+//   ],
+
+//   mode: [
+//     ["ok", "ok", "ok", "ok"],
+//     ["ok", "ok", "ok", "ok"],
+//     ["ok", "ok", "ok", "ok"],
+//     ["ok", "ok", "ok", "ok"],
+//   ],
+
+//   cap: [
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0],
+//   ],
+// });
 export const demo = () => ({
-  name: "BloodFlow — Transportation Optimization Demo",
+  name: "Transportation Problem - Base Case (600 Units)",
 
-  banks: [
-    "Bank A",
-    "Bank B",
-    "Bank C",
-    "Bank D",
-  ],
+  banks: ["S1", "S2", "S3", "S4"],
 
-  hospitals: [
-    "Hosp 1",
-    "Hosp 2",
-    "Hosp 3",
-    "Hosp 4",
-  ],
+  hospitals: ["D1", "D2", "D3", "D4", "D5"],
 
-  supply: [20, 30, 50, 20],
+  supply: [150, 100, 200, 150],
 
-  demand: [30, 40, 30, 20],
+  demand: [120, 80, 100, 180, 120],
 
   cost: [
-    [4, 6, 4, 8],
-    [9, 14, 13, 5],
-    [10, 17, 10, 7],
-    [6, 9, 3, 4],
+    [1.5, 14, 14, 37.5, 15],
+    [10, 6, 24.5, 29, 20.5],
+    [40, 0, 26.5, 0.24, 49],
+    [12, 15, 46, 49, 9],
   ],
 
   mode: [
-    ["ok", "ok", "ok", "ok"],
-    ["ok", "ok", "ok", "ok"],
-    ["ok", "ok", "ok", "ok"],
-    ["ok", "ok", "ok", "ok"],
+    ["ok", "ok", "ok", "ok", "ok"],
+    ["ok", "ok", "ok", "ok", "ok"],
+    ["ok", "ban", "ok", "cap", "ok"],
+    ["ok", "ok", "ok", "ok", "ok"],
   ],
 
   cap: [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0],
+    [0, 0, 0, 50, 0],
+    [0, 0, 0, 0, 0],
   ],
 });
 export const empty = () => ({
