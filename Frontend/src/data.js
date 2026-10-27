@@ -69,9 +69,9 @@
 export const demo = () => ({
   name: "Transportation Problem - Base Case (600 Units)",
 
-  banks: ["S1", "S2", "S3", "S4"],
+  banks: ["Bank A", "Bank B", "Bank C", "Bank D"],
 
-  hospitals: ["D1", "D2", "D3", "D4", "D5"],
+   hospitals: ["Hosp 1", "Hosp 2", "Hosp 3", "Hosp 4", "Hosp 5"],
 
   supply: [150, 100, 200, 150],
 
